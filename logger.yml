@@ -1,0 +1,15 @@
+---
+
+logdir: /home/irc/irclogs
+baseurl: https://yourcompany/irclogs/
+server: irc.server
+port: 6667
+user: logger
+realname: logger
+ssl: true
+nickname: logger
+password: password
+oper_password: password
+auto_join_patterns:
+   - ^#incident\d+
+db_path: /home/irc/logger-bot/logger.sqlite3 

@@ -1,0 +1,8 @@
+CREATE TABLE logger(
+	channel TEXT,
+	autojoin TINYINT,
+	chime TINYINT,
+	who text,
+	date text,
+	UNIQUE(channel)
+);

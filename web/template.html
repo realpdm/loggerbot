@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title> <%= IRCLOG[:title]  %></title>
+	<meta name="author" content="Phillip Moore">
+	<!-- Date: 2012-07-13 -->
+	
+	<style media="screen" type="text/css">
+
+    .irclog {
+		padding-top:10px;
+		padding-bottom:10px;
+		padding-left:15px;
+		padding-right:15px;
+		text-align:left;
+		border:1px solid;
+
+    }
+    .navigation {
+		padding-top:10px;
+		padding-bottom:10px;
+
+    }
+
+    .footer {
+		padding-top:10px;
+		padding-bottom:10px;
+		text-align:right;
+
+
+    }
+    .logline {
+        text-indent: -30px;
+        padding-left: 30px;
+    }
+
+    .hilight {
+        background-color: #99ff99;
+    }
+
+	.query {
+		text-align: center;
+		padding-top:15px;
+		padding-bottom:10px;
+	
+	}
+	.title {
+		font-weight:bold;
+		font-size: 150%;
+	}
+	</style>
+	
+</head>
+<body>
+	<div class="navigation">
+	<table border="0" width='70%' align='center'>
+	<tr>
+		<td align="left" width='20%'>
+			<%= IRCLOG[:previous] %>
+		</td>	
+		<td align="center" width='60%'>
+			<div class="title"><%= IRCLOG[:title] %></div>
+		</td>	
+		<td align="right" widht='20%'>
+			<%= IRCLOG[:next]  %>
+		</td>
+	</tr>
+	</table>
+	
+	<div class="query">
+		<form name="logform">
+		Grep: <input name="grep" type=text size="15" value="<%= IRCLOG[:grep] %>" onkeydown="if (event.keyCode == 13) { openurl(this); return false; }"> | 
+		Highlight: <input name="hilight" type=text size="15" value="<%= IRCLOG[:hilight] %>">
+		<input type=submit value="Go">
+		</form>
+	</div>
+	</div>
+	
+	
+	<div class=irclog>
+	<%= IRCLOG[:log] %>
+	</div>
+
+	<div class=footer>
+	Box Confidential. Internal Use Only.
+
+	</div>
+
+
+
+</body>
+</html>
